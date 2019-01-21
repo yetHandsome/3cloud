@@ -55,7 +55,7 @@ end
 local tell_atk = IDS.IDS(reqURL, clientIP, ngx)
 if tell_atk ~= '1' then
     inc  = red:incr(incrKey)
-    if inc < 5 then
+    if inc < 2 then
        inc = red:expire(incrKey,60)
     end
 
